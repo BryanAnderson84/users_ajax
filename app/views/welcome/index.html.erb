@@ -1,0 +1,33 @@
+<h1>Ajax Users Portal</h1>
+<hr />
+
+<button id="load_users">Load All Users</button>
+<button id="show_create">Create New User</button>
+
+<div id="edit_content" class="no-display">
+  <form id="edit_user_content">
+    <input id="edit_first_name" placeholder="First Name" name="user[first_name]" required />
+    <br />
+    <input id="edit_last_name" placeholder="Last Name" name="user[last_name]" />
+    <br />
+    <input id="edit_phone_number" placeholder="Phone Number" name="user[phone_number]" />
+    <br />
+    <input type="hidden" id="user_id" />
+    <input type="submit" />
+  </form>
+</div>
+
+<div id="new_user_content" class="no-display">
+  <form action="/users" method="POST" id="new_user">
+    <input id="user_first_name" type='text' placeholder="First Name" name="user[first_name]" required />
+    <br />
+    <input id="user_last_name" type='text' placeholder="Last Name" name="user[last_name]" required />
+    <br />
+    <input id="user_phone_number" type='text' placeholder="Phone Number" name="user[phone_number]" required />
+    <br />
+    <input type="submit"/>
+    <br />
+  </form>
+</div>
+
+<ul id="users" style="list-style: none"></ul>
